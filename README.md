@@ -1,3 +1,3 @@
-# Create a Chrome extension to modify a website's HTML or CSS
+# Create a Chrome extension Speech to text anywhere
 
-See post: https://blog.lateral.io/2016/04/create-chrome-extension-modify-websites-html-css/
+focus input[type=text] or textarea filed anywhere, activeted auto and just speak
