@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Speech to Text",
+  "version": "1.0.0",
+  "description": "focus input[type=text] or textarea filed anywhere, activeted auto and just speak",  
+
+	"browser_action": {    
+    "default_popup": "popup.html"
+  },
+   "permissions": [
+      "storage",
+	  "tabs"
+    ],
+  "icons": {"128": "ico.png" },
+  
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["jquery.min.js","content.js"],
+    "matches": ["<all_urls>"]
+  }],
+  
+	 "background": {
+	"scripts": ["background.js"],
+	"persistent": true
+	}
+	
+    //,"web_accessible_resources": ["search.htm"]
+
+
+}
