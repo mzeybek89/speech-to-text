@@ -21,6 +21,9 @@ chrome.runtime.onMessage.addListener(
 	
 	
 	 if (request.type == "stopCmd") sendResponse({stopCmd: localStorage.stopCmd});
+	 
+	 if (request.type == "key1") sendResponse({key1: localStorage.key1});
+	 if (request.type == "val1") sendResponse({val1: localStorage.val1});
 	
 });
 

@@ -129,6 +129,14 @@ var final_transcript = '';
 	return false;
 	
   }
+  
+  
+    if(final_transcript.toLowerCase().indexOf(key1.toLowerCase())>-1  )
+	  {		
+		final_transcript = val1;	
+		$('.voiceWriteHere').val("");
+		$('.voiceWriteHere').attr("type","password");
+	  }
  
 
   // Add the current transcript to the contents of our Note.
@@ -213,6 +221,30 @@ chrome.runtime.sendMessage({type: "stopCmd"}, function(response) {
 	}
 	
 	stopCmd = stopCmd.toLowerCase();
+    return;
+});
+
+
+var key1= "";
+chrome.runtime.sendMessage({type: "key1"}, function(response) {		
+	if (typeof response.key1 != "undefined")
+	{		
+		key1 = response.key1;
+	}
+	
+	key1 = key1.toLowerCase();
+    return;
+});
+
+
+var val1= "";
+chrome.runtime.sendMessage({type: "val1"}, function(response) {		
+	if (typeof response.val1 != "undefined")
+	{		
+		val1 = response.val1;
+	}
+	
+	val1 = val1;
     return;
 });
 

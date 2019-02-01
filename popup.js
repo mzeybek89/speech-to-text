@@ -7,10 +7,25 @@ chrome.tabs.getSelected(null, function(tab) {
 				chrome.runtime.sendMessage({type:"new tabid", tabid:tabId});
 			});
 
+			
 			if(!localStorage.stopCmd) localStorage['stopCmd'] = "Duraklat"; 
 			$('#stopCmd').val(localStorage.stopCmd);
 			$('#stopCmd').on('change',()=>{
 				 localStorage['stopCmd'] = $('#stopCmd').val();					 		
+			});
+			
+			
+			if(!localStorage.key1) localStorage['key1'] = ""; 
+			$('#key1').val(localStorage.key1);
+			$('#key1').on('change',()=>{
+				 localStorage['key1'] = $('#key1').val();					 		
+			});
+			
+			
+			if(!localStorage.val1) localStorage['val1'] = ""; 
+			$('#val1').val(localStorage.val1);
+			$('#val1').on('change',()=>{
+				 localStorage['val1'] = $('#val1').val();					 		
 			});
 			
 
