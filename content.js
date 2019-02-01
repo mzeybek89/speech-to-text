@@ -10,6 +10,7 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: false })
 
 
 var fn = function(){
+	
 
 //var iFrame  = document.createElement ("iframe");
 //iFrame.src  = chrome.extension.getURL ("search.htm");
@@ -120,10 +121,11 @@ var final_transcript = '';
 	return false;
   }
   
-  if(final_transcript.indexOf("selam ver")>-1 || final_transcript.indexOf("Selam ver")>-1)
+  if(final_transcript.toLowerCase().indexOf("selam ver")>-1  )
   {
+	recognition.stop();	
 	alert("Selam Dünyalı");
-	
+	$('#spch').hide();
 	return false;
 	
   }
