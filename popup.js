@@ -7,7 +7,12 @@ chrome.tabs.getSelected(null, function(tab) {
 				chrome.runtime.sendMessage({type:"new tabid", tabid:tabId});
 			});
 
-
+			if(!localStorage.stopCmd) localStorage['stopCmd'] = "Duraklat"; 
+			$('#stopCmd').val(localStorage.stopCmd);
+			$('#stopCmd').on('change',()=>{
+				 localStorage['stopCmd'] = $('#stopCmd').val();					 		
+			});
+			
 
 
 
@@ -34,6 +39,8 @@ chrome.tabs.getSelected(null, function(tab) {
 	
         toggle(localStorage.status);
     };
+	
+	
 
 
  if(!localStorage.status) localStorage['status'] = 1;

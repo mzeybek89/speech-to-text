@@ -20,6 +20,8 @@ chrome.runtime.onMessage.addListener(
         }
 	
 	
+	 if (request.type == "stopCmd") sendResponse({stopCmd: localStorage.stopCmd});
+	
 });
 
 

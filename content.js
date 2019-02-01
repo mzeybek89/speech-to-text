@@ -114,10 +114,10 @@ var final_transcript = '';
   
   
   //console.log(transcript);
-  if(final_transcript.indexOf("duraklat")>-1)
+  if(final_transcript.toLowerCase().indexOf(stopCmd)>-1)
   {
 	recognition.stop();	
-	
+	$('#spch').hide();
 	return false;
   }
   
@@ -205,10 +205,21 @@ function capitalize(s) {
 /*fn function bitti*/
 
 
+var stopCmd= "Duraklat";
+chrome.runtime.sendMessage({type: "stopCmd"}, function(response) {		
+	if (typeof response.stopCmd != "undefined")
+	{		
+		stopCmd = response.stopCmd;
+	}
+	
+	stopCmd = stopCmd.toLowerCase();
+    return;
+});
 
 
 
 chrome.runtime.sendMessage({type: "status"}, function(response) {	
+
     if(response.status == 0) 
 	{		
 	}
