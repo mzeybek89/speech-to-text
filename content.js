@@ -111,7 +111,7 @@ var final_transcript = '';
     //final_span.innerHTML = linebreak(final_transcript);
     //interim_span.innerHTML = linebreak(interim_transcript);
 	
-  
+ 
   
   //console.log(transcript);
   if(final_transcript.toLowerCase().indexOf(stopCmd)>-1)
@@ -131,7 +131,7 @@ var final_transcript = '';
   }
   
   
-    if(final_transcript.toLowerCase().indexOf(key1.toLowerCase())>-1  )
+    if(final_transcript.toLowerCase().indexOf(key1.toLowerCase())>-1 && key1.toLowerCase()!="" )
 	  {		
 		final_transcript = val1;	
 		$('.voiceWriteHere').val("");
@@ -173,7 +173,7 @@ var final_transcript = '';
 
 	
 	
-	if(final_transcript.length>0){
+	if(final_transcript.length>0){		
 		$('.voiceWriteHere').val($('.voiceWriteHere').val()+final_transcript);
 		$('#spch').hide();
 	}
