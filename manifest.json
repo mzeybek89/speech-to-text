@@ -6,11 +6,15 @@
   "description": "focus input[type=text] or textarea filed anywhere, activeted auto and just speak",  
 
 	"browser_action": {    
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon":"ico.png"
   },
-   "permissions": [
+
+
+
+  "permissions": [
       "storage",
-	  "tabs"
+	    "tabs"
     ],
   "icons": {"128": "ico.png" },
   
@@ -20,7 +24,7 @@
     "matches": ["<all_urls>"]
   }],
   
-	 "background": {
+	"background": {
 	"scripts": ["background.js"],
 	"persistent": true
 	}

@@ -9,6 +9,8 @@ navigator.mediaDevices.getUserMedia({ audio: true, video: false })
 
 
 
+
+
 var fn = function(){
 	
 
@@ -131,8 +133,10 @@ var final_transcript = '';
   }
   
   
+   
     if(final_transcript.toLowerCase().indexOf(key1.toLowerCase())>-1 && key1.toLowerCase()!="" )
 	  {		
+   
 		final_transcript = val1;	
 		$('.voiceWriteHere').val("");
 		$('.voiceWriteHere').attr("type","password");

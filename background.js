@@ -27,6 +27,10 @@ chrome.runtime.onMessage.addListener(
 	
 });
 
+chrome.browserAction.onClicked.addListener(function(){
+	//chrome.tabs.create({'url':"chrome-extension://hgedchlmblgakdomeodigpacheojdoda/popup.html"});
+});
+
 
 
 
